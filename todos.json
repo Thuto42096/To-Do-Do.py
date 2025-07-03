@@ -6,5 +6,13 @@
   {
     "task": "iron",
     "due_date": null
+  },
+  {
+    "task": "wash dishes",
+    "due_date": null
+  },
+  {
+    "task": "stfu",
+    "due_date": null
   }
 ]
