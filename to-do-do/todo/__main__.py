@@ -1,3 +1,6 @@
+# to-do-do/todo/__main__.py
+
+
 import json
 import os
 import tkinter as tk
@@ -9,7 +12,8 @@ def load_data(file_path):
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
             return json.load(file)
-    return []
+    else:
+        return []
 
 def save_data(file_path, data):
     with open(file_path, "w") as file:
@@ -22,11 +26,10 @@ class TaskManagerApp:
 
         self.data = load_data(FILE_PATH)
 
-        # Widgets
         self.task_entry = tk.Entry(root, width=40)
         self.task_entry.pack(pady=10)
 
-        self.add_button = tk.Button(root, text="Add Task", command=self.add_task, width=30, background="lightblue" )
+        self.add_button = tk.Button(root, text="Add Task", command=self.add_task, width=30, background="lightblue")
         self.add_button.pack()
 
         self.task_listbox = tk.Listbox(root, width=50)
